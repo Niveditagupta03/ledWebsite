@@ -4,6 +4,7 @@ import img1 from "./img1.jpg"; // Adjust the path based on your file structure
 import img2 from "./img2.jpg"; // Adjust the path based on your file structure
 import img3 from "./img3.jpg"; // Adjust the path based on your file structure
 import { FaArrowRight } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 function Second() {
   const [activeContent, setActiveContent] = useState(1); // Default to the first button
@@ -20,17 +21,44 @@ function Second() {
       height="100vh"
       backgroundColor="#f7f7f7"
       position="relative"
+      fontFamily="'Host Grotesk', sans-serif"
     >
       {/* Heading Text */}
       <Flex direction="row" align="center" zIndex={2} gap="9px">
-        <Text color="black" fontSize="48px">
-          Brilliance Unleashed with
+        <Text
+          color="black"
+          fontSize="48px"
+          fontFamily="'Host Grotesk', sans-serif"
+        >
+          Brilliance
+        </Text>
+        <div
+          style={{
+            //display: "inline-block",
+            backgroundColor: "#E62C13",
+            padding: "1px",
+            borderRadius: "25px",
+            width: "100px", // Set the desired width here
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center", //
+          }}
+        >
+          <FiArrowUpRight style={{ fontSize: "48px", color: "white" }} />
+        </div>
+        <Text
+          color="black"
+          fontSize="48px"
+          fontFamily="'Host Grotesk', sans-serif"
+        >
+          Unleashed with
         </Text>
         <Text
           color="#E62C13"
           fontSize="48px"
           fontStyle="italic"
           fontWeight="600"
+          fontFamily="'Host Grotesk', sans-serif"
         >
           LEDTRONICS
         </Text>
@@ -41,6 +69,7 @@ function Second() {
         textAlign="center"
         zIndex={2}
         marginTop="20px"
+        fontFamily="'Host Grotesk', sans-serif"
       >
         {[
           "At LEDTRONICS, we believe in pushing the boundaries of innovation in LED technology.",
@@ -52,7 +81,13 @@ function Second() {
           </Text>
         ))}
       </Flex>
-      <Flex direction="row" gap="20px" marginTop="30px" zIndex={2}>
+      <Flex
+        direction="row"
+        gap="20px"
+        marginTop="30px"
+        zIndex={2}
+        fontFamily="'Host Grotesk', sans-serif"
+      >
         {[
           "Mission of the Company",
           "Values We Maintain",
@@ -70,7 +105,7 @@ function Second() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "white";
-              e.currentTarget.style.borderColor = "#fc3608";
+              e.currentTarget.style.borderColor = "#E62C13";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -84,8 +119,6 @@ function Second() {
           </button>
         ))}
       </Flex>
-
-      {/* Default Content Display */}
       {activeContent === 1 && (
         <Flex direction="row" gap="15px" marginTop="30px" zIndex={2}>
           <Flex
@@ -98,10 +131,15 @@ function Second() {
             padding="30px"
           >
             <Box>
-              <Text fontSize="32px" fontWeight="800" mb="4">
+              <Text
+                fontSize="32px"
+                fontWeight="800"
+                mb="4"
+                fontFamily="'Host Grotesk', sans-serif"
+              >
                 Mission of the Company
               </Text>
-              <Text>
+              <Text fontFamily="'Host Grotesk', sans-serif">
                 At LEDTRONICS, our work is guided by a strong commitment to
                 integrity. We hold ourselves to the highest ethical standards,
                 ensuring transparency and honesty in all our dealings.
@@ -122,6 +160,7 @@ function Second() {
                 alignItems="center"
                 zIndex={2}
                 border="1px solid #E85513"
+                fontFamily="'Host Grotesk', sans-serif"
               >
                 <button
                   className="enquire-button"
@@ -181,10 +220,15 @@ function Second() {
             padding="30px"
           >
             <Box>
-              <Text fontSize="32px" fontWeight="800" mb="4">
+              <Text
+                fontSize="32px"
+                fontWeight="800"
+                mb="4"
+                fontFamily="'Host Grotesk', sans-serif"
+              >
                 Values We Maintain
               </Text>
-              <Text>
+              <Text fontFamily="'Host Grotesk', sans-serif">
                 At LEDTRONICS, our work is guided by a strong commitment to
                 integrity. We hold ourselves to the highest ethical standards,
                 ensuring transparency and honesty in all our dealings.
@@ -217,6 +261,7 @@ function Second() {
                     fontSize: "16px",
                     cursor: "pointer",
                     transition: "background-color 0.3s",
+                    fontFamily: "'Host Grotesk', sans-serif",
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.backgroundColor = "#fc3608")
@@ -264,10 +309,15 @@ function Second() {
             padding="30px"
           >
             <Box>
-              <Text fontSize="32px" fontWeight="800" mb="4">
+              <Text
+                fontSize="32px"
+                fontWeight="800"
+                mb="4"
+                fontFamily="'Host Grotesk', sans-serif"
+              >
                 History of the Company
               </Text>
-              <Text>
+              <Text fontFamily="'Host Grotesk', sans-serif">
                 At LEDTRONICS, our work is guided by a strong commitment to
                 integrity. We hold ourselves to the highest ethical standards,
                 ensuring transparency and honesty in all our dealings.
@@ -300,6 +350,7 @@ function Second() {
                     fontSize: "16px",
                     cursor: "pointer",
                     transition: "background-color 0.3s",
+                    fontFamily: "'Host Grotesk', sans-serif",
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.backgroundColor = "#fc3608")

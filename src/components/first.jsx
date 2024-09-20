@@ -1,13 +1,16 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
-import React, { useState } from "react"; // Import useState here
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import bottomImage from "./girl.png"; // Adjust the path as necessary
-import logo from "./logo.png"; // Ensure this path is correct
+import bottomImage from "./girl.png";
+import logo from "./logo.png";
 import arrow from "./arrow.png";
 import text from "./text.png";
+import user from "./user.png";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 function First() {
-  const [hovered, setHovered] = useState(false); // State for hover effect
-  const [hoveredLink, setHoveredLink] = useState(null); // State for link hover effect
+  const [hovered, setHovered] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
     <div style={{ position: "relative", height: "100vh" }}>
@@ -17,8 +20,9 @@ function First() {
         justifyContent="space-between"
         width="100%"
         color="white"
-        position="absolute"
-        padding="25px  50px 25px 50px"
+        padding="25px 50px"
+        zIndex={3}
+        fontFamily="Host Grotesk', sans-serif"
       >
         <Flex flex="1">
           <Image
@@ -30,7 +34,12 @@ function First() {
           />
         </Flex>
 
-        <Flex flex="2" gap="20px" fontSize="15px">
+        <Flex
+          flex="2"
+          gap="22px"
+          fontSize="15px"
+          fontFamily="'Host Grotesk', sans-serif"
+        >
           {[
             "Home",
             "About Us",
@@ -38,24 +47,29 @@ function First() {
             "Products",
             "Project",
             "Contact Us",
-          ].map((item) => (
+          ].map((item, index) => (
             <a
-              key={item}
+              key={item + index}
               href={`#${item.toLowerCase().replace(" ", "")}`}
               style={{
                 color: hoveredLink === item ? "#ea2d01" : "white",
                 textDecoration: "none",
                 transition: "color 0.3s",
+                display: "flex",
+                alignItems: "center",
               }}
               onMouseEnter={() => setHoveredLink(item)}
               onMouseLeave={() => setHoveredLink(null)}
             >
               {item.toUpperCase()}
+              {item === "Contact Us" && (
+                <RiArrowDropDownLine
+                  style={{ fontSize: "38px", marginLeft: "5px" }}
+                />
+              )}
             </a>
           ))}
         </Flex>
-
-        {/* Enquire button on the right */}
         <Flex>
           <button
             className="enquire-button"
@@ -63,12 +77,12 @@ function First() {
               color: "white",
               backgroundColor: hovered ? "#fc3608" : "#ea2d01",
               border: "none",
-              padding: "10px 20px",
+              padding: "10px",
               borderRadius: "10px",
-              fontSize: "16px",
-              fontWeight: "300",
+              fontSize: "14px",
               cursor: "pointer",
               transition: "background-color 0.3s",
+              fontFamily: "'Host Grotesk', sans-serif",
             }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
@@ -77,38 +91,34 @@ function First() {
           </button>
         </Flex>
       </Flex>
-
-      {/* Main content */}
       <Text
         style={{
           position: "absolute",
-          top: "28%",
-          left: "30%",
+          top: "25%",
+          left: "33%",
           transform: "translate(-50%, -50%)",
           color: "white",
           fontSize: "5rem",
           textAlign: "center",
           zIndex: 2,
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
-        Enlighten your business
+        Enlighten Your Business
       </Text>
       <Flex
         flex="1"
         style={{
           position: "absolute",
-          top: "28%",
-          left: "64%",
+          top: "26%",
+          left: "69%",
           transform: "translate(-50%, -50%)",
-          color: "white",
-          fontSize: "5rem",
-          textAlign: "center",
           zIndex: 2,
         }}
       >
         <Image
           src={arrow}
-          alt="Your Logo"
+          alt="Arrow"
           width="150px"
           height="auto"
           style={{ maxWidth: "100%", height: "auto" }}
@@ -117,13 +127,14 @@ function First() {
       <Text
         style={{
           position: "absolute",
-          top: "40%",
+          top: "35%",
           left: "8%",
           transform: "translate(-50%, -50%)",
           color: "white",
           fontSize: "5rem",
           textAlign: "center",
           zIndex: 2,
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
         with
@@ -131,8 +142,8 @@ function First() {
       <Text
         style={{
           position: "absolute",
-          top: "40%",
-          left: "30%",
+          top: "35%",
+          left: "32%",
           transform: "translate(-50%, -50%)",
           color: "#E62C13",
           fontSize: "5rem",
@@ -140,6 +151,7 @@ function First() {
           zIndex: 2,
           fontStyle: "italic",
           fontWeight: "600",
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
         LEDTRONICS
@@ -147,7 +159,7 @@ function First() {
       <Text
         style={{
           position: "absolute",
-          top: "58%",
+          top: "53%",
           left: "43%",
           transform: "translate(-50%, -50%)",
           color: "white",
@@ -155,6 +167,7 @@ function First() {
           textAlign: "justify",
           zIndex: 2,
           width: "80%",
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
         <p>Welcome to LEDTRONICS, your trusted</p>
@@ -169,7 +182,7 @@ function First() {
       <div
         style={{
           position: "absolute",
-          top: "75%",
+          top: "70%",
           left: "8%",
           transform: "translate(-50%, -50%)",
           backgroundColor: "white",
@@ -182,6 +195,7 @@ function First() {
           alignItems: "center",
           zIndex: 2,
           border: "1px solid #E85503",
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
         <button
@@ -195,6 +209,7 @@ function First() {
             fontSize: "16px",
             cursor: "pointer",
             transition: "background-color 0.3s",
+            fontFamily: "'Host Grotesk', sans-serif",
           }}
           onMouseEnter={(e) =>
             (e.currentTarget.style.backgroundColor = "#fc3608")
@@ -216,19 +231,29 @@ function First() {
         </div>
       </div>
 
-      <img
-        src={bottomImage}
-        alt="A scenic view at the bottom of the screen"
+      <div
         style={{
           position: "absolute",
-          bottom: "0",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "30%",
-          height: "auto",
+          bottom: "135px",
+          width: "100%",
+          height: "200px",
           zIndex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      />
+      >
+        <img
+          src={bottomImage}
+          alt="A scenic view at the bottom of the screen"
+          style={{
+            transform: "scaleX(-1)",
+            width: "30%",
+            height: "auto",
+          }}
+        />
+      </div>
+
       <Flex
         flex="1"
         style={{
@@ -244,12 +269,47 @@ function First() {
       >
         <Image
           src={text}
-          alt="Your Logo"
+          alt="Text"
           width="250px"
           height="auto"
           style={{ maxWidth: "100%", height: "auto" }}
         />
       </Flex>
+      <Flex
+        flex="1"
+        style={{
+          position: "absolute",
+          top: "89%",
+          left: "79%",
+          transform: "translate(-50%, -50%)",
+          color: "white",
+          fontSize: "5rem",
+          textAlign: "center",
+          zIndex: 2,
+        }}
+      >
+        <Image
+          src={user}
+          alt="Text"
+          width="250px"
+          height="auto"
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      </Flex>
+
+      <div
+        style={{
+          position: "absolute",
+          bottom: "20px",
+          right: "20px",
+          backgroundColor: "#E62C13",
+          padding: "10px",
+          borderRadius: "15px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      ></div>
     </div>
   );
 }
