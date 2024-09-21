@@ -5,6 +5,7 @@ import img2 from "./img2.jpg"; // Adjust the path based on your file structure
 import img3 from "./img3.jpg"; // Adjust the path based on your file structure
 import { FaArrowRight } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
+import "./style.css";
 
 function Second() {
   const [activeContent, setActiveContent] = useState(1); // Default to the first button
@@ -23,7 +24,6 @@ function Second() {
       position="relative"
       fontFamily="'Host Grotesk', sans-serif"
     >
-      {/* Heading Text */}
       <Flex direction="row" align="center" zIndex={2} gap="9px">
         <Text
           color="black"
@@ -34,12 +34,11 @@ function Second() {
         </Text>
         <div
           style={{
-            //display: "inline-block",
             backgroundColor: "#E62C13",
             padding: "1px",
             borderRadius: "25px",
             height: "40px",
-            width: "100px", // Set the desired width here
+            width: "100px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center", //
@@ -94,51 +93,67 @@ function Second() {
           "Values We Maintain",
           "History of the Company",
         ].map((label, index) => (
-          <button
+          <div
             key={label}
+            className="button-container" // Keep this for clarity
             style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
               height: "100px",
               width: "410px",
               border: "2px solid #e6e6e6",
               borderRadius: "25px",
-              position: "relative",
               cursor: "pointer",
               transition: "background-color 0.3s, border-color 0.3s",
-              backgroundColor: "transparent",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "white";
-              e.currentTarget.style.borderColor = "#E62C13";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.borderColor = "#e6e6e6";
+              backgroundColor: "#f7f7f7",
             }}
             onClick={() => handleButtonClick(index + 1)} // Pass button index
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#E62C13"; // Change border color on hover
+              const protrusion = e.currentTarget.querySelector(".protrusion");
+              if (protrusion) {
+                protrusion.style.borderBottom = "2px solid #E62C13"; // Change protrusion border on hover
+                protrusion.style.borderLeft = "2px solid #E62C13";
+                protrusion.style.borderRight = "2px solid #E62C13";
+              }
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e6e6e6"; // Reset border color
+              const protrusion = e.currentTarget.querySelector(".protrusion");
+              if (protrusion) {
+                protrusion.style.borderBottom = "2px solid #E6E6E6"; // Reset protrusion border
+                protrusion.style.borderLeft = "2px solid #E6E6E6";
+                protrusion.style.borderRight = "2px solid #E6E6E6";
+              }
+            }}
           >
             <Text fontSize="24px" fontWeight="bold" color="black">
               {label}
             </Text>
             <div
+              className="protrusion"
               style={{
-                content: '""',
                 position: "absolute",
                 bottom: "-10px",
                 left: "50%",
                 transform: "translateX(-50%)",
                 width: "70px",
-                height: "15px",
+                height: "10px",
                 backgroundColor: "#f7f7f7",
-                border: "2px solid #e6e6e6",
+                borderBottom: "2px solid #E6E6E6",
+                borderLeft: "2px solid #E6E6E6",
+                borderRight: "2px solid #E6E6E6", // Initial grey border
                 borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
-                borderRadius: "5px",
+                borderRadius: "0 0 50px 50px",
+                transition: "border-color 0.3s",
               }}
             />
-          </button>
+          </div>
         ))}
       </Flex>
+
       {activeContent === 1 && (
         <Flex direction="row" gap="15px" marginTop="30px" zIndex={2}>
           <Flex
