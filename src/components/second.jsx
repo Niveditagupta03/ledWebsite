@@ -5,8 +5,6 @@ import img2 from "./img2.jpg"; // Adjust the path based on your file structure
 import img3 from "./img3.jpg"; // Adjust the path based on your file structure
 import { FaArrowRight } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import "./style.css";
-
 function Second() {
   const [activeContent, setActiveContent] = useState(1); // Default to the first button
 
@@ -20,7 +18,7 @@ function Second() {
       justify="center"
       align="center"
       height="100vh"
-      backgroundColor="#f7f7f7"
+      backgroundColor="#F0F3F7"
       position="relative"
       fontFamily="'Host Grotesk', sans-serif"
     >
@@ -95,7 +93,7 @@ function Second() {
         ].map((label, index) => (
           <div
             key={label}
-            className="button-container" // Keep this for clarity
+            className="button-container"
             style={{
               position: "relative",
               display: "flex",
@@ -106,23 +104,27 @@ function Second() {
               border: "2px solid #e6e6e6",
               borderRadius: "25px",
               cursor: "pointer",
-              transition: "background-color 0.3s, border-color 0.3s",
-              backgroundColor: "#f7f7f7",
+              transition: "background-color 0.2s, border-color 0.2s",
+              backgroundColor: "#F0F3F7",
             }}
-            onClick={() => handleButtonClick(index + 1)} // Pass button index
+            onClick={() => handleButtonClick(index + 1)}
             onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "white"; // Change background to white on hover
               e.currentTarget.style.borderColor = "#E62C13"; // Change border color on hover
               const protrusion = e.currentTarget.querySelector(".protrusion");
               if (protrusion) {
-                protrusion.style.borderBottom = "2px solid #E62C13"; // Change protrusion border on hover
+                protrusion.style.backgroundColor = "white"; // Match protrusion background to button
+                protrusion.style.borderBottom = "2px solid #E62C13";
                 protrusion.style.borderLeft = "2px solid #E62C13";
                 protrusion.style.borderRight = "2px solid #E62C13";
               }
             }}
             onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#F0F3F7"; // Reset background color
               e.currentTarget.style.borderColor = "#e6e6e6"; // Reset border color
               const protrusion = e.currentTarget.querySelector(".protrusion");
               if (protrusion) {
+                protrusion.style.backgroundColor = "#F0F3F7"; // Reset protrusion background
                 protrusion.style.borderBottom = "2px solid #E6E6E6"; // Reset protrusion border
                 protrusion.style.borderLeft = "2px solid #E6E6E6";
                 protrusion.style.borderRight = "2px solid #E6E6E6";
@@ -141,13 +143,13 @@ function Second() {
                 transform: "translateX(-50%)",
                 width: "70px",
                 height: "10px",
-                backgroundColor: "#f7f7f7",
+                backgroundColor: "#F0F3F7",
                 borderBottom: "2px solid #E6E6E6",
                 borderLeft: "2px solid #E6E6E6",
-                borderRight: "2px solid #E6E6E6", // Initial grey border
+                borderRight: "2px solid #E6E6E6",
                 borderTop: "none",
                 borderRadius: "0 0 50px 50px",
-                transition: "border-color 0.3s",
+                transition: "border-color 0.2s",
               }}
             />
           </div>

@@ -4,7 +4,6 @@ import { FaArrowRight } from "react-icons/fa";
 import bottomImage from "./girl.png";
 import logo from "./logo.png";
 import arrow from "./arrow.png";
-import text from "./text.png";
 import user from "./user.png";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
@@ -91,93 +90,119 @@ function First() {
           </button>
         </Flex>
       </Flex>
-      <Text
-        style={{
-          position: "absolute",
-          top: "25%",
-          left: "33%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-          fontSize: "5rem",
-          textAlign: "center",
-          zIndex: 2,
-          fontFamily: "'Host Grotesk', sans-serif",
-        }}
-      >
-        Enlighten Your Business
-      </Text>
-      <Flex
-        flex="1"
-        style={{
-          position: "absolute",
-          top: "26%",
-          left: "69%",
-          transform: "translate(-50%, -50%)",
-          zIndex: 2,
-        }}
-      >
-        <Image
-          src={arrow}
-          alt="Arrow"
-          width="150px"
-          height="auto"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+      <Flex>
+        <Text
+          style={{
+            position: "absolute",
+            top: "25%",
+            left: "33%",
+            transform: "translate(-50%, -50%)",
+            color: "white",
+            fontSize: "5rem",
+            textAlign: "center",
+            zIndex: 2,
+            fontFamily: "'Host Grotesk', sans-serif",
+          }}
+        >
+          Enlighten Your Business
+        </Text>
+        <Flex
+          flex="1"
+          style={{
+            position: "absolute",
+            top: "26%",
+            left: "69%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 2,
+          }}
+        >
+          <Image
+            src={arrow}
+            alt="Arrow"
+            width="150px"
+            height="auto"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </Flex>
+        <Text
+          style={{
+            position: "absolute",
+            top: "35%",
+            left: "8%",
+            transform: "translate(-50%, -50%)",
+            color: "white",
+            fontSize: "5rem",
+            textAlign: "center",
+            zIndex: 2,
+            fontFamily: "'Host Grotesk', sans-serif",
+          }}
+        >
+          with
+        </Text>
+        <Text
+          style={{
+            position: "absolute",
+            top: "35%",
+            left: "32%",
+            transform: "translate(-50%, -50%)",
+            color: "#E62C13",
+            fontSize: "5rem",
+            textAlign: "center",
+            zIndex: 2,
+            fontStyle: "italic",
+            fontWeight: "600",
+            fontFamily: "'Host Grotesk', sans-serif",
+          }}
+        >
+          LEDTRONICS
+        </Text>
       </Flex>
-      <Text
-        style={{
-          position: "absolute",
-          top: "35%",
-          left: "8%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-          fontSize: "5rem",
-          textAlign: "center",
-          zIndex: 2,
-          fontFamily: "'Host Grotesk', sans-serif",
-        }}
-      >
-        with
-      </Text>
-      <Text
-        style={{
-          position: "absolute",
-          top: "35%",
-          left: "32%",
-          transform: "translate(-50%, -50%)",
-          color: "#E62C13",
-          fontSize: "5rem",
-          textAlign: "center",
-          zIndex: 2,
-          fontStyle: "italic",
-          fontWeight: "600",
-          fontFamily: "'Host Grotesk', sans-serif",
-        }}
-      >
-        LEDTRONICS
-      </Text>
-      <Text
-        style={{
-          position: "absolute",
-          top: "53%",
-          left: "43%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-          fontSize: ".9rem",
-          textAlign: "justify",
-          zIndex: 2,
-          width: "80%",
-          fontFamily: "'Host Grotesk', sans-serif",
-        }}
-      >
-        <p>Welcome to LEDTRONICS, your trusted</p>
-        <p>partner in LED screen solutions in the UAE.</p>
-        <p>With over 35 years of industry expertise, we</p>
-        <p>pride ourselves in delivering fast and reliable</p>
-        <p>service. Explore our innovative LED display</p>
-        <p>solution, designed to meet the highest</p>
-        <p>standards of performance and reliability.</p>
-      </Text>
+      <Flex>
+        <Text
+          style={{
+            position: "absolute",
+            top: "53%",
+            left: "43%",
+            transform: "translate(-50%, -50%)",
+            color: "white",
+            fontSize: ".9rem",
+            textAlign: "justify",
+            zIndex: 2,
+            width: "80%",
+            fontFamily: "'Host Grotesk', sans-serif",
+          }}
+        >
+          <p>Welcome to LEDTRONICS, your trusted</p>
+          <p>partner in LED screen solutions in the UAE.</p>
+          <p>With over 35 years of industry expertise, we</p>
+          <p>pride ourselves in delivering fast and reliable</p>
+          <p>service. Explore our innovative LED display</p>
+          <p>solution, designed to meet the highest</p>
+          <p>standards of performance and reliability.</p>
+        </Text>{" "}
+        <Text
+          style={{
+            position: "absolute",
+            top: "53%",
+            left: "43%",
+            transform: "translate(-50%, -50%)",
+            color: "white",
+            fontSize: ".9rem",
+            textAlign: "justify",
+            zIndex: 2,
+            width: "80%",
+            fontFamily: "'Host Grotesk', sans-serif",
+          }}
+        >
+          <p>Welcome to LEDTRONICS, your trusted</p>
+          <p>partner in LED screen solutions in the UAE.</p>
+          <p>With over 35 years of industry expertise, we</p>
+          <p>pride ourselves in delivering fast and reliable</p>
+          <p>service. Explore our innovative LED display</p>
+          <p>solution, designed to meet the highest</p>
+          <p>standards of performance and reliability.</p>
+        </Text>
+      </Flex>
 
       <div
         style={{
@@ -258,29 +283,99 @@ function First() {
         flex="1"
         style={{
           position: "absolute",
-          top: "63%",
-          left: "74%",
+          top: "65%",
+          left: "75%",
           transform: "translate(-50%, -50%)",
           color: "white",
-          fontSize: "5rem",
+          fontSize: "15px",
           textAlign: "center",
           zIndex: 2,
+          fontFamily: "'Host Grotesk', sans-serif",
         }}
       >
-        <Image
-          src={text}
-          alt="Text"
-          width="250px"
-          height="auto"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "28px",
+            right: "150px",
+            backgroundColor: "#E62C13",
+            padding: "5px",
+            borderRadius: "35px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            top: "10px",
+            right: "150px",
+            backgroundColor: "#E62C13",
+            padding: "5px",
+            borderRadius: "35px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            top: "80px",
+            right: "150px",
+            backgroundColor: "#E62C13",
+            padding: "5px",
+            borderRadius: "35px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            top: "210px",
+            left: "25px",
+            backgroundColor: "white",
+            padding: "5px",
+            borderRadius: "35px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></div>
+        <Flex justifyContent="space-between" alignItems="center">
+          <Flex
+            flexDir="column"
+            justifyContent="flex-start" // Aligns the text blocks to the left side
+            alignItems="flex-start" // Aligns vertically at the top
+            gap="30px" // Adds spacing between the text blocks
+          >
+            <Text textAlign="left">
+              35 Years of Industry
+              <br />
+              Leadership
+            </Text>
+            <Text textAlign="left">
+              Fast and Reliable
+              <br />
+              Service
+            </Text>
+            <Text textAlign="left">
+              Innovative LED
+              <br />
+              Solutions
+            </Text>
+          </Flex>
+        </Flex>
       </Flex>
       <Flex
         flex="1"
         style={{
           position: "absolute",
-          top: "89%",
-          left: "79%",
+          top: "85%",
+          left: "75%",
           transform: "translate(-50%, -50%)",
           color: "white",
           fontSize: "5rem",
@@ -291,10 +386,16 @@ function First() {
         <Image
           src={user}
           alt="Text"
-          width="250px"
+          width="120px"
           height="auto"
           style={{ maxWidth: "100%", height: "auto" }}
         />
+        <Flex flexDir="column" textAlign="left" alignItems="flex-start">
+          <Text fontSize="22px" fontWeight="900">
+            12M
+          </Text>
+          <Text fontSize="14px">Happy Users</Text>
+        </Flex>
       </Flex>
 
       <div
