@@ -127,12 +127,13 @@ function Second() {
                 left: "50%",
                 transform: "translateX(-50%)",
                 width: "70px",
-                height: "10px",
-                backgroundColor: "white",
+                height: "15px",
+                backgroundColor: "#f7f7f7",
                 border: "2px solid #E62C13",
                 borderTop: "none",
                 borderLeft: "none",
                 borderRight: "none",
+                borderRadius: "5px",
               }}
             />
           </button>
