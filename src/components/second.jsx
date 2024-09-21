@@ -129,7 +129,7 @@ function Second() {
                 width: "70px",
                 height: "15px",
                 backgroundColor: "#f7f7f7",
-                border: "2px solid #E62C13",
+                border: "2px solid #e6e6e6",
                 borderTop: "none",
                 borderLeft: "none",
                 borderRight: "none",
