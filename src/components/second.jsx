@@ -99,10 +99,12 @@ function Second() {
             style={{
               height: "100px",
               width: "410px",
-              border: "2px solid  #e6e6e6",
+              border: "2px solid #e6e6e6",
               borderRadius: "25px",
+              position: "relative",
               cursor: "pointer",
               transition: "background-color 0.3s, border-color 0.3s",
+              backgroundColor: "transparent",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "white";
@@ -117,6 +119,22 @@ function Second() {
             <Text fontSize="24px" fontWeight="bold" color="black">
               {label}
             </Text>
+            <div
+              style={{
+                content: '""',
+                position: "absolute",
+                bottom: "-10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "70px",
+                height: "10px",
+                backgroundColor: "white",
+                border: "2px solid #E62C13",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
+              }}
+            />
           </button>
         ))}
       </Flex>
