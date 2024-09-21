@@ -300,11 +300,11 @@ function First() {
       <div
         style={{
           position: "absolute",
-          bottom: "20px",
-          right: "20px",
+          bottom: "100px",
+          left: "590px",
           backgroundColor: "#E62C13",
-          padding: "10px",
-          borderRadius: "15px",
+          padding: "150px",
+          borderRadius: "35px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

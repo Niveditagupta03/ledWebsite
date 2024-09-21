@@ -38,13 +38,14 @@ function Second() {
             backgroundColor: "#E62C13",
             padding: "1px",
             borderRadius: "25px",
+            height: "40px",
             width: "100px", // Set the desired width here
             display: "flex",
             justifyContent: "center",
             alignItems: "center", //
           }}
         >
-          <FiArrowUpRight style={{ fontSize: "48px", color: "white" }} />
+          <FiArrowUpRight style={{ fontSize: "46px", color: "black" }} />
         </div>
         <Text
           color="black"
